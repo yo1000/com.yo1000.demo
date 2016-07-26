@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./datasource/note;MODE=MySQL
+    username: sa
+    password:
+mybatis:
+  configuration:
+    useColumnLabel: true
+    mapUnderscoreToCamelCase: true
+  mapper-locations: mybatis/sql/*.xml
+logging:
+  level:
+    org.springframework.orm.jpa: debug
+#    org.springframework.transaction: debug

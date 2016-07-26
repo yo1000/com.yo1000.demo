@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yo1000.demo.repository.NoteRepository">
+    <select id="findAll" resultType="com.yo1000.demo.model.Note">
+        SELECT
+            NOTE_ID,
+            TITLE,
+            NOTE,
+            CREATED
+        FROM
+            NOTE
+    </select>
+    <update id=""></update>
+    <delete id=""></delete>
+    <sql id=""></sql>
+    <insert id="save" parameterType="com.yo1000.demo.model.Note">
+        INSERT INTO NOTE (
+            TITLE,
+            NOTE,
+            CREATED
+        ) VALUES (
+            #{title},
+            #{note},
+            #{created}
+        )
+    </insert>
+</mapper>
+
