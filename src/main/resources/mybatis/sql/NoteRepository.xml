@@ -12,9 +12,6 @@
         FROM
             NOTE
     </select>
-    <update id=""></update>
-    <delete id=""></delete>
-    <sql id=""></sql>
     <insert id="save" parameterType="com.yo1000.demo.model.Note">
         INSERT INTO NOTE (
             TITLE,
