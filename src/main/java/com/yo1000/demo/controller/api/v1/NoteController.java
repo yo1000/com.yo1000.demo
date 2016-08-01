@@ -15,7 +15,6 @@ import java.util.Date;
 public class NoteController {
     private NoteService noteService;
 
-    @Autowired
     public NoteController(NoteService noteService) {
         this.noteService = noteService;
     }
@@ -25,7 +24,7 @@ public class NoteController {
      *
      * @return ノートの一覧。
      */
-    @RequestMapping("")
+    @GetMapping("")
     public Object getIndex() {
         return getNoteService().readAll();
     }
@@ -36,7 +35,7 @@ public class NoteController {
      *
      * @return 書き込み成功したレコードの件数
      */
-    @RequestMapping("write")
+    @GetMapping("write")
     @ResponseStatus(HttpStatus.CREATED)
     public Object getWrite(@RequestParam String title, @RequestParam(required = false) String note) {
         return getNoteService().write(new Note(title, note, new Date()));

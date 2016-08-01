@@ -22,7 +22,6 @@ import java.util.List;
 public class NoteService {
     private NoteRepository noteRepository;
 
-    @Autowired
     public NoteService(NoteRepository noteRepository) {
         this.noteRepository = noteRepository;
     }
