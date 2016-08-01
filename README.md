@@ -1,3 +1,13 @@
+# How to Run
+
+```
+$ ./mvnw spring-boot:run
+```
+
+Demo URL
+- http://localhost:8080/note
+- http://localhost:8080/note/write?title=hoge&note=fuga
+
 # Controller
 
 コントローラには、`@Controller` アノテーションを付与し、API など REST インターフェースを扱うコントローラには、`@RestController` アノテーションを付与します。
